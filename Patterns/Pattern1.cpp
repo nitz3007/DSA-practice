@@ -20,4 +20,6 @@ int main() {
     int n;
     cin>>n;
     printPattern1(n);
+
+    return 0;
 }
