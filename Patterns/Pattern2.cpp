@@ -1,3 +1,9 @@
+// Question: Print the following pattern for a given input number n:
+// * 
+// * *
+// * * *
+// * * * *
+
 #include <bits/stdc++.h>
 using namespace std;
 
