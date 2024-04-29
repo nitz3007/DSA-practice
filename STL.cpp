@@ -69,6 +69,19 @@ void explainVectors() {
     
 }
 
+//list
+void explainList() {
+    list<int> ls;
+    ls.push_back(2);
+    ls.emplace_back(4);
+    ls.push_front(1);
+    ls.emplace_front(9);
+    
+    for(auto it: ls){
+        cout<<it<<" ";
+    }
+    //all ither methods are same as in vector
+}
 
 int main() {
     explainPairs();
