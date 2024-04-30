@@ -83,6 +83,22 @@ void explainList() {
     //all ither methods are same as in vector
 }
 
+//deque
+void explainDeque() {
+    deque<int> dq;
+    dq.push_back(1);
+    dq.emplace_back(2);
+    dq.push_front(3);
+    dq.emplace_front(4);
+    
+    cout<<dq.back()<<endl;
+    cout<<dq.front()<<endl;
+    
+    for(auto it: dq){
+        cout<<it<<" ";
+    }
+}
+
 int main() {
     explainPairs();
     return 0;
