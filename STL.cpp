@@ -99,6 +99,19 @@ void explainDeque() {
     }
 }
 
+//stack
+void explainStack() {
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    
+    cout<<st.top()<<endl;
+    
+    st.pop();
+    cout<<st.top()<<endl;
+}
+
 int main() {
     explainPairs();
     return 0;
