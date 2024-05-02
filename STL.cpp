@@ -128,6 +128,32 @@ void explainQueue() {
     cout<<q.front()<<endl;
 }
 
+//priority queue
+void explainPQ() {
+    priority_queue<int> pq;
+    pq.push(3);
+    pq.push(2);
+    pq.push(8);
+    pq.emplace(12);
+    
+    pq.pop();
+    
+    cout<<pq.top()<<endl;
+}
+
+//min heap priority_queue
+void minHeap() {
+    priority_queue<int, vector<int>, greater<int>> mpq;
+    mpq.push(5);
+    mpq.push(2);
+    mpq.push(8);
+    mpq.emplace(10);
+    
+    mpq.pop();
+    
+    cout<<mpq.top();
+}
+
 int main() {
     explainPairs();
     return 0;
