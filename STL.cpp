@@ -154,6 +154,42 @@ void minHeap() {
     cout<<mpq.top();
 }
 
+//set
+void explainSet() {
+    set<int> s;
+    s.insert(2);
+    s.insert(2); //stores only unique values
+    s.insert(4);
+    s.emplace(1);
+    s.emplace(5);
+    s.emplace(7);
+    s.emplace(10);
+    s.emplace(8);
+    s.emplace(14);
+    
+    auto it1 = s.find(2); //return mem address of element 2
+    auto it2 = s.find(20); //returns memory address of s.end() ie, address of mem just after the last element- since 20 is not preent in the set
+    
+    s.erase(4); //takes log N time
+    
+    int ct1 = s.count(1);
+    int ct2 = s.count(20);
+    cout<<ct2<<endl;
+    
+    auto it = s.find(8);
+    s.erase(it); //takes O(1) time
+    
+    auto it3 = s.find(2);
+    auto it4 = s.find(7);
+    s.erase(it3, it4);
+    
+    for(auto it: s ){
+        cout<<it<<" ";
+    }
+    
+    //learn about upper_bound & lower_bound
+}
+
 int main() {
     explainPairs();
     return 0;
