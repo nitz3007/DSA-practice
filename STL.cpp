@@ -267,6 +267,29 @@ void explainSort() {
     }
 }
 
+//__builtin_popcount, next_permutation, max_element & min_element methods:
+void explainExtraMethods() {
+    int n = 7;
+    int cnt = __builtin_popcount(n);
+    cout<<cnt<<endl; 
+    
+    long long num = 167234765987;
+    int cnt2 = __builtin_popcountll(num);
+    cout<<cnt2<<endl;
+    
+    string s= "123";
+    do{
+        cout<<s<<" ";
+    }while(next_permutation(s.begin(),s.end()));
+    cout<<endl;
+    
+    int a[] = {2,5,7,11,75,30,6};
+    int max_val = *max_element(a, a+7);
+    int min_val = *min_element(a, a+7);
+    cout<<"Max Value: "<<max_val<<endl; 
+    cout<<"Min Value: "<<min_val<<endl; 
+}
+
 
 int main() {
     explainPairs();
