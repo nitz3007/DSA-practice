@@ -190,6 +190,25 @@ void explainSet() {
     //learn about upper_bound & lower_bound
 }
 
+//multiset - special sets where value can be repetative
+//sorted but not unique
+void explainMultiSet() {
+    multiset<int> ms;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    
+    ms.erase(1); //deletes all instances of 1
+    
+    ms.erase(ms.find(1)); //deletes only the first instance for 14
+    
+    cout<<ms.count(1)<<endl;
+    
+    for( auto it: ms) {
+        cout<<it<<" ";
+    }
+}
+
 int main() {
     explainPairs();
     return 0;
