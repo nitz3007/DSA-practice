@@ -209,6 +209,21 @@ void explainMultiSet() {
     }
 }
 
+//unorderedSet - stores unique values but not in sorted order
+void explainUnorderedSet() {
+    unordered_set<int> us;
+    us.insert(5);
+    us.emplace(2);
+    us.insert(7);
+    us.insert(2); 
+    
+    for( auto it: us) {
+        cout<<it<<" ";
+    }
+    // O/p: 7 2 5
+    
+}
+
 int main() {
     explainPairs();
     return 0;
