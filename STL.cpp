@@ -240,6 +240,34 @@ void explainMap() {
     cout<<mp[7]<<endl;
 }
 
+//sort method & comparator
+bool comp(pair<int,int>p1, pair<int,int>p2) {
+    if(p1.second < p2.second) return true;
+    if(p1.second > p2.second) return false;
+    
+    //if second is same:
+    if(p1.first > p2.first) return true;
+    return false;
+}
+void explainSort() {
+    int a[] = {9,4,7,2,66,3,1,7};
+    int n= sizeof(a) / sizeof(a[0]);
+    sort(a,a+n);
+    
+    for(auto it: a){
+        cout<<it<<" ";
+    }
+    
+    cout<<endl;
+    
+    pair<int,int> arr[] = {{1,2}, {2,1}, {4,1}};
+    sort(arr, arr+3, comp);
+    for(auto it: arr){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+}
+
+
 int main() {
     explainPairs();
     return 0;
