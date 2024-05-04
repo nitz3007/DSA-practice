@@ -224,6 +224,22 @@ void explainUnorderedSet() {
     
 }
 
+//map
+void explainMap() {
+    map<int,int> mp;
+    mp[1] = 2;
+    mp.insert({3,4});
+    mp.insert({4,2});
+    mp.emplace(pair<int,int>(2,5));
+    
+    for(auto it:mp){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+    
+    cout<<mp[2]<<endl;
+    cout<<mp[7]<<endl;
+}
+
 int main() {
     explainPairs();
     return 0;
