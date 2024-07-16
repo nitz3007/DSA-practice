@@ -10,6 +10,11 @@ int sumOfN(int i, int N, int sum) {
     sumOfN(i, N, sum);
 }
 
+int sumOfN2(int i) {
+    if(i==1) return 1;
+    return i + sumOfN(i-1);
+}
+
 int main() {
 	int n;
 	cin>>n;
