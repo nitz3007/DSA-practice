@@ -1,22 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+//Recursive Bubble Sort
 void bubbleSort(int arr[], int N) {
-    for(int i=0; i<N-1; i++) {
-        int didSwap = 0;
-        for(int j=0; j<N-1-i; j++) {
-            if(arr[j] > arr[j+1]) {
-                swap(arr[j], arr[j+1]);
-                didSwap++;
-            }
-        }
-        
-        if(didSwap==0) {
-            break;
+    if(N<=1) {
+        return;
+    }
+    for(int j=0; j<N-1; j++) {
+        if(arr[j] > arr[j+1]) {
+            swap(arr[j], arr[j+1]);
         }
     }
-   
+    bubbleSort(arr, N-1);
 }
 
 int main() {
@@ -37,5 +32,4 @@ int main() {
 	return 0;
 }
 
-//Time Complexity : O(n^2);
-//Best case TC: O(N)
+// TC: O(N^2)
