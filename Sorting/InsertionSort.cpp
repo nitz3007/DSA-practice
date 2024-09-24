@@ -20,7 +20,6 @@ void insertionSort(int arr[], int n) {
 }
 
 int main() {
-    // Write C++ code here
     int n;
     cin>>n;
     int arr[n];

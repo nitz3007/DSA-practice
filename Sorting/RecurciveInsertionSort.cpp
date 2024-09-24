@@ -5,7 +5,7 @@ void recurciveInsertionSort(int arr[], int N, int i) {
     if(i==N) return;
     
     int j=i;
-    while(arr[j]>0 && arr[j]<arr[j-1]) {
+    while(j>0 && arr[j]<arr[j-1]) {
         swap(arr[j], arr[j-1]);
         j--;
     }
