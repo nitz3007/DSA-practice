@@ -25,6 +25,17 @@ void leftRotateByD(vector<int> &arr, int d, int N) {
     
 }
 
+//Reverse Function
+void ReverseArray(vector<int> &arr, int start, int end) {
+    while(start < end) {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
 //Optimal Solution
 //TC: O(d) + O(N-d) + O(N) = O(2N)
 //SC: O(1)
